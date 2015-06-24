@@ -24,8 +24,8 @@
 
 (function ( angular ) {
 	'use strict';
-
-	angular.module( 'angularTreeview', [] ).directive( 'treeModel', ['$compile', function( $compile ) {
+	var module = angular.module('angularTreeview', []);
+	module.directive('treeModel', function($compile) {
 		return {
 			restrict: 'A',
 			link: function ( scope, element, attrs ) {
@@ -94,5 +94,5 @@
 				}
 			}
 		};
-	}]);
+	});
 })( angular );
